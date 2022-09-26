@@ -1,10 +1,14 @@
-function previewMultiple(event) {
+const image = document.getElementById('image');
+
+const previewMultiple = (event) => {
   const form = document.querySelector('#formFile');
   form.innerHTML = "";
-  var images = document.getElementById("image");
+  var images = image;
   var number = images.files.length;
   for (i = 0; i < number; i++) {
       var urls = URL.createObjectURL(event.target.files[i]);
       form.innerHTML += '<img src="' + urls + '" class="thumbnail">';
   }
 }
+
+image.addEventListener('change', previewMultiple);
