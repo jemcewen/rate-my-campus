@@ -1,0 +1,38 @@
+#formFile {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+#formFile img {
+  height: 100px;
+  border-radius: 4px;
+  margin-right: 17px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  opacity: 85%;
+}
+
+.thumbnail {
+  height: 100px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  opacity: 85%;
+}
+
+.thumb-container {
+  position: relative;
+  width: auto;
+  height: 100px;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 12px;
+}
+
+.checkbox {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}

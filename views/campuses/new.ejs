@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/styles/images.css" class="rel">
+<div class="row">
+  <h1 class="text-center">New Campus</h1>
+  <div class="col-md-6 offset-md-3">
+    <form action="/campuses" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Campus Name</label>
+        <input class="form-control" type="text" name="campus[title]" id="title" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" name="campus[location]" id="location" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control"type="text" name="campus[description]" id="description" rows="4" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Upload image(s)</label>
+        <input class="form-control" type="file" id="image" name="image" multiple onchange="previewMultiple(event)">
+      </div>
+      <div id="formFile" class="mb-3"></div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Campus</button>
+        <a class="btn btn-danger" href="/campuses">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

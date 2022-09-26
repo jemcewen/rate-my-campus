@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate')%>
+<h1>Campuses</h1>
+<div class="text-center">
+  <a href="/campuses/new" class="btn btn-dark w-100 p-2 mb-3 mt-2" role="button">Add new campus</a>
+</div>
+
+  <% for (let campus of campuses) { %>
+    <div class="card mb-3">
+      <div class="row">
+        <div class="col-md-4">
+          <% if(campus.images.length) { %> 
+            <img class="img-fluid" alt="" src="<%= campus.images[0].cardImage %>" crossorigin>
+          <% } else { %> 
+            <img class="img-fluid" alt="" src="https://res.cloudinary.com/dyyktpise/image/upload/e_grayscale/v1662776326/rate-my-campus/vbjin0xd1t4trz59inu9.jpg" crossorigin>
+            <% } %> 
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= campus.title %></h5>
+          
+            <p class="card-text">
+              <small class="text-muted"><%= campus.location %></small>
+            </p>
+            <p class="card-text"><%= campus.description %></p>
+            <a href="/campuses/<%= campus._id %>" class="btn btn-success">Reviews</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %> 
