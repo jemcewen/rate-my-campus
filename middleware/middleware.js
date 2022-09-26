@@ -3,7 +3,7 @@ const multer = require('multer');
 const { storage } = require('../cloudinary');
 const upload = multer({
    storage,
-   limits: { fileSize: 1000000 } // max file size of 1 mb
+   limits: { fileSize: 3000000 } // max file size of 1 mb
 });
 const { campusValidation, reviewValidation } = require('../validations');
 const Campus = require('../models/campus');
